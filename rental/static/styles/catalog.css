@@ -12,6 +12,7 @@ h1 {
     -webkit-box-shadow: 1px 12px 15px 5px #727272; 
     box-shadow: 1px 12px 15px 5px #727272;
     border: 2px solid var(--primary);
+    background-color: #001aff0e;
     
 }
 
