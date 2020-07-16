@@ -21,7 +21,7 @@ class Movie(models.Model):
     release_year = models.IntegerField()
     in_stock = models.IntegerField()
     price = models.FloatField()
-    image_url = models.CharField(max_length=999)
+    image_url = models.CharField(max_length=99999)
     length_min = models.IntegerField()
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
     date_created = models.DateTimeField(default=timezone.now)

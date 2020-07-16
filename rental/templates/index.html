@@ -1,12 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
+
+{% block styles %}
+  <link rel="stylesheet" href="/static/styles/home.css">
+{% endblock %}
+
 <h1>Welcome to {{ title }}</h1>
-<h3>Welcome back to the best video rental reinvented, Blockbuster 20/20</h3>
+<h3>New Movies</h3>
 
 <table class="table table-striped table-primary">
     <thead>
       <tr>
-        <th scope="col">Id</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
         <th scope="col">Title</th>
         <th scope="col">Genre</th>
         <th scope="col">Released</th>
@@ -18,6 +24,7 @@
         {% for m in movies %}
       <tr>
         <th scope="row">{{m.id}}</th>
+        <td><img class="movie-img" src="{{m.image_url}}"</td>
         <td>{{m.title}}</td>
         <td>{{m.genre}}</td>
         <td>{{m.release_year}}</td>
