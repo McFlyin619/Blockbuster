@@ -19,13 +19,14 @@ function fetchCatalog() {
 
 function displayMovie(movie) {
     var template = `
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 25rem;">
             <img src="${movie.image_url}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">${movie.title} - ${movie.genre.name}</h5>
+                <h2 class="card-title">${movie.title} - $${movie.price.toFixed(2)}</h2>
+                <h4>${movie.genre.name}</h4>
                 <p class="card-text"><b>Released:</b> ${movie.release_year}</p>
                 <p class="card-text"><b>Length:</b> ${movie.length_min} min</p>
-                <a href="/details/${movie.id}" class="btn btn-primary">Rent for <span class="price">$${movie.price.toFixed(2)}</span></a>
+                <a href="/details/${movie.id}" class="btn btn-primary">Info</a>
             </div>
         </div>
     `;
@@ -33,6 +34,7 @@ function displayMovie(movie) {
     var container = $('.catalog-container')
     container.append(template);
 }
+
 
 
 
